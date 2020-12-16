@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pandemic Map</title>
-  </head>
-  <body>
-    <h1>Empieza aquí! 🎨</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pandemic Map</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" />
+</head>
+
+<body>
+  <h1>THE PANDEMIC MAP 🦠</h1>
+  <div class="container">
+    <div class="map-selector-div">
+      <div class="country-select" id="country-select">Select a Country:</div>
+      <div id="mapid"></div>
+    </div>
+    <div id="daily-cases-bar-chart-div">
+      <p>Select a Country to see the Monthly Cases Evolution</p>
+      <div class="ct-chart ct-chart-daily ct-golden-section" id="daily-bar-chart"></div>
+    </div>
+
+    <div id="cases-k-chart-div">
+      <p>Cases x 1,000 / Country</p>
+      <div class="ct-chart ct-golden-section" id="bar-chart"></div>
+    </div>
+
+    <div id="pie-chart-div">
+      <p>Total Cases by Country: 55 EMEA Countries</p>
+      <div class="ct-chart ct-golden-section" id="pie-chart"></div>
+      <p><i>Countries included in 'Others' category have a Sum of Total Cases < 15,000</i>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <script src="./covidData.js"></script>
+  <script src="./selector.js"></script>
+  <script src="./index.js"></script>
+  <script src="./mapinit.js"></script>
+  <script src="./barcharts.js"></script>
+  <script src="./piechart.js"></script>
+</body>
+
 </html>

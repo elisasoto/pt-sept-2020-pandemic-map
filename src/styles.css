@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 1rem;
+}
+
+#mapid {
+    margin: 0 auto;
+    height: 300px;
+    width: 400px;
+}
+
+#daily-cases-bar-chart-div {
+    margin: 0 auto;
+    width: 600px;
+}
+
+#daily-bar-chart {
+    height: fit-content;
+}
+
+#cases-k-chart-div {
+    margin: 0 auto;
+    width: 600px;
+}
+
+#pie-chart-div {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.map-selector-div {}
+
+.ct-label.ct-horizontal.ct-end {
+    font-size: 10px !important;
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    transform: translateY(-10%);
+}
+
+.ct-chart-daily .ct-bar {
+    stroke-width: 47px;
+}
+
+.ct-label.ct-horizontal.ct-end {
+    display: block;
+    text-align: center;
+}

@@ -3961,4 +3961,4 @@ const covidData = [
   },
 ];
 
-console.log(covidData);
+
