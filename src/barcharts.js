@@ -1,8 +1,8 @@
 // function that deals with the country data to create a barchart
 
 function handleCountryData(countryName) {
-  let countryDate = [];
-  let yearCases = [];
+  const countryDate = [];
+  const yearCases = [];
 
   const countryDailyCases = covidData.filter((country) => {
     if (countryName === country.name) {
@@ -14,7 +14,9 @@ function handleCountryData(countryName) {
   });
   countryDailyCases.sort((a, b) => (a.date > b.date ? 1 : -1));
 
-  countryDailyCases.forEach((country) => countryDate.push(country.date) && yearCases.push(Number(country.dailyCases)));
+  countryDailyCases.forEach(
+    (country) => countryDate.push(country.date) && yearCases.push(Number(country.dailyCases))
+  );
 
   return [countryDate, yearCases];
 }
@@ -44,15 +46,11 @@ const result = covidData.filter((country) => {
 
 result.sort((a, b) => b.casesPerMile - a.casesPerMile);
 
-let countries = [];
-const getCountries = result.forEach((country) => {
-  return countries.push(country.name);
-});
+const countries = [];
+result.forEach((country) => countries.push(country.name));
 
-let casesPerMile = [];
-const getCasesPerMile = result.forEach((country) => {
-  return casesPerMile.push(Number(country.casesPerMile));
-});
+const casesPerMile = [];
+result.forEach((country) => casesPerMile.push(Number(country.casesPerMile)));
 
 // 2.2. Creating a Barcahart
 

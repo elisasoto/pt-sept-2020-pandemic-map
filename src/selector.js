@@ -32,9 +32,9 @@ for (let i = 0; i < uniqueCountries.length; i++) {
 // 4 Creating select Functionality and executing the selectCountry map display
 
 function handleChangeSelect() {
-    goToSelectCountry();
-    paintBarGraph()
-  }
-  
-  const countrySelect = document.querySelector('#countryFilterSelect');
-  countrySelect.addEventListener('change', handleChangeSelect);
+  goToSelectCountry();
+  paintBarGraph();
+}
+
+const countrySelect = document.querySelector('#countryFilterSelect');
+countrySelect.addEventListener('change', handleChangeSelect);
